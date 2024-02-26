@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./dist/main.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=clash-display@700,500,600,300&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      @media (min-width: 1024px) {
+        video {
+          width: 100%;
+        }
+      }
+      @media (max-width: 720px) {
+        .mobile-video {
+          width: 100%;
+          height: 800px;
+          object-fit: cover;
+        }
+      }
+
+      #mobile-menu {
+        /* Modify the existing styles */
+        transform: translateY(-100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 1000;
+      }
+    </style>
+  </head>
+  <body>
+    <nav
+      class="border border-white flex items-center justify-between font-inter text-sm"
+    >
+      <!-- First Section -->
+      <div class="flex gap-5 items-center lg:px-11 px-4 py-4 lg:py-0">
+        <img
+          src="./dist/images/platinumpodium.png"
+          alt="platinum podium"
+          class="h-11"
+        />
+        <img
+          src="./dist/images/ppc-logo.png"
+          alt="ppc logo"
+          class="h-11 ml-2"
+        />
+      </div>
+
+      <!-- Navbar Links (visible on desktop) -->
+      <div
+        class="hidden lg:flex space-x-4 flex-grow gap-11 py-6 justify-center border-r border-r-white border-l border-l-white"
+      >
+        <a href="#" class="text-blue-800">About Us</a>
+        <a href="#" class="text-blue-800">Meet The Team</a>
+        <a href="#" class="text-blue-800">Our Solutions</a>
+        <a href="#" class="text-blue-800">Gallery</a>
+        <a href="#" class="text-blue-800">Let's Connect</a>
+      </div>
+
+      <!-- Last Section -->
+      <div class="hidden lg:flex items-center px-11">
+        <a href="#" class="flex items-center gap-2.5">
+          <img
+            src="./dist/images/whatsapp.png"
+            alt="Whatsapp Logo"
+            width="22"
+          />
+          Whatsapp Us
+        </a>
+      </div>
+
+      <!-- Hamburger Button (visible on mobile) -->
+      <div class="lg:hidden lg:px-11 px-4 flex items-center">
+        <button id="mobile-menu-btn" class="text-white focus:outline-none">
+          <img
+            src="./dist/images/hamburger-dark.png"
+            alt="hamburger"
+            width="50"
+          />
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="lg:hidden fixed bg-blue-800 bg-opacity-95 z-50 top-0 left-0 w-full h-full flex-col justify-center items-center"
+      >
+        <button
+          id="mobile-menu-close-btn"
+          class="text-white focus:outline-none absolute top-7 right-5"
+        >
+          <img
+            src="./dist/images/x-button.png"
+            alt="hamburger"
+            width="30"
+            class="rotate-90"
+          />
+        </button>
+        <div id="mobile-links" class="flex flex-col p-4 space-y-4 w-full">
+          <a href="#" class="text-sm font-inter p-2.5 text-teal-200"
+            >About Us</a
+          >
+          <a href="#" class="text-sm font-inter p-2.5 text-teal-200"
+            >Meet The Team</a
+          >
+          <a href="#" class="text-sm font-inter p-2.5 text-teal-200"
+            >Our Solutions</a
+          >
+          <a href="#" class="text-sm font-inter p-2.5 text-teal-200">Gallery</a>
+          <a href="#" class="text-sm font-inter p-2.5 text-teal-200"
+            >Let's Connect</a
+          >
+          <a
+            href="#"
+            class="text-sm font-inter p-2.5 gap-1 flex items-center text-teal-200"
+          >
+            <img
+              src="./dist/images/whatsapp-colour.png"
+              alt="Whatsapp Logo"
+              width="22"
+            />
+            Whatsapp Us
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <header
+      class="flex flex-col md:flex-row md:justify-center md:items-center"
+      style="background: linear-gradient(93deg, white 0%, #c7f1e9 100%)"
+    >
+      <div class="container py-8 md:w-1/2" style="background: transparent">
+        <h1
+          class="text-5xl md:text-7xl font-clashDisplay font-light text-center"
+          style="
+            background: linear-gradient(93deg, #222741, #217f70 100%);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+          "
+        >
+          Let's <span class="font-clashDisplay font-medium">Connect</span>
+        </h1>
+      </div>
+      <div class="relative md:w-1/2">
+        <img
+          src="./dist/images/connect-chrome-vase.png"
+          alt="platinum podium"
+          style="mix-blend-mode: luminosity"
+          class="md:block md:ml-auto w-full h-full hidden"
+        />
+        <img
+          src="./dist/images/connect-chrome-vase-mobile.png"
+          alt="platinum podium"
+          style="mix-blend-mode: luminosity"
+          class="block md:ml-auto w-full h-full md:hidden"
+        />
+      </div>
+    </header>
+
+    <section class="container py-24">
+      <h2
+        class="text-2xl md:text-4xl font-clashDisplay font-medium text-center mb-12 leading-normal"
+        style="
+          background: linear-gradient(93deg, #222741, #217f70 100%);
+          -webkit-text-fill-color: transparent;
+          -webkit-background-clip: text;
+        "
+      >
+        Fill out the form below and we'll get back to you shortly.
+      </h2>
+
+      <form class="lg:px-24 lg:block hidden">
+        <div class="lg:flex lg:gap-5">
+          <div class="lg:w-1/2">
+            <!-- Left column for larger screens -->
+            <div class="mb-12">
+              <label class="block text-gray-700 text-sm" for="fullname"
+                >Full Name</label
+              >
+              <input
+                class="border-b border-black w-full text-gray-700 leading-tight focus:outline-none text-sm"
+                style="background: none"
+                id="fullname"
+                type="text"
+              />
+            </div>
+
+            <div class="mb-12">
+              <label class="block text-gray-700 text-sm" for="phone-number"
+                >Phone Number</label
+              >
+              <input
+                class="border-b border-black w-full text-gray-700 leading-tight focus:outline-none text-sm"
+                style="background: none"
+                id="phone-number"
+                type="number"
+              />
+            </div>
+
+            <div class="mb-12 relative">
+              <label class="block text-gray-700 text-sm" for="reference">
+                Type of Events
+              </label>
+              <select
+                class="border-b border-black w-full text-gray-700 leading-tight focus:outline-none text-sm pr-8"
+                style="background: none"
+                id="reference"
+              >
+                <option value=""></option>
+                <option value="linkedin">LinkedIn</option>
+                <option value="google">Google</option>
+                <option value="indeed">Indeed</option>
+                <option value="jobstreet">Jobstreet</option>
+              </select>
+              <div
+                class="pointer-events-none absolute inset-y-0 right-0 bottom-0 flex items-center text-gray-700"
+              >
+                <img src="./dist/images/down-icon.svg" alt="down button" />
+              </div>
+            </div>
+
+            <div class="mb-12">
+              <label class="block text-gray-700 text-sm" for="budget">
+                Budget (if know)
+              </label>
+              <input
+                class="border-b border-black w-full text-gray-700 leading-tight focus:outline-none text-sm"
+                style="background: none"
+                id="budget"
+                type="number"
+              />
+            </div>
+          </div>
+
+          <div class="lg:w-1/2">
+            <!-- Right column for larger screens -->
+            <div class="mb-12">
+              <label class="block text-gray-700 text-sm" for="email"
+                >Email</label
+              >
+              <input
+                class="border-b border-black w-full text-gray-700 leading-tight focus:outline-none text-sm"
+                style="background: none"
+                id="email"
+                type="email"
+              />
+            </div>
+
+            <div class="mb-12">
+              <label class="block text-gray-700 text-sm" for="company-name"
+                >Company Name</label
+              >
+              <input
+                class="border-b border-black w-full text-gray-700 leading-tight focus:outline-none text-sm"
+                style="background: none"
+                id="company-name"
+                type="text"
+              />
+            </div>
+
+            <div class="mb-12">
+              <label class="block text-gray-700 text-sm" for="pax">
+                Estimated Number of Participants (Pax)
+              </label>
+              <input
+                class="border-b border-black w-full text-gray-700 leading-tight focus:outline-none text-sm"
+                style="background: none"
+                id="pax"
+                type="number"
+              />
+            </div>
+
+            <div class="mb-12">
+              <label class="block text-gray-700 text-sm" for="reference">
+                How did you hear about us?
+              </label>
+              <input
+                class="border-b border-black w-full text-gray-700 leading-tight focus:outline-none text-sm"
+                style="background: none"
+                id="reference"
+                type="text"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-12">
+          <label class="block text-gray-700 text-sm" for="comments">
+            Additional Comments or Questions
+          </label>
+          <input
+            class="border-b border-black w-full text-gray-700 leading-tight focus:outline-none text-sm"
+            style="background: none"
+            id="comments"
+            type="text"
+          />
+        </div>
+
+        <div class="mx-auto">
+          <button
+            class="bg-blue-500 hover:bg-blue-700 text-white py-4 px-9 rounded-full focus:outline-none focus:shadow-outline block mx-auto"
+            style="background: linear-gradient(98deg, black 0%, #264f49 100%)"
+            type="button"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+
+      <form class="lg:hidden">
+        <div class="lg:w-1/2">
+          <div class="mb-12">
+            <label class="block text-gray-700 text-sm" for="fullname">
+              Full Name
+            </label>
+            <input
+              class="border-b border-black w-full text-gray-700 leading-tight focus:outline-none text-sm"
+              style="background: none"
+              id="fullname"
+              type="text"
+            />
+          </div>
+          <div class="mb-12">
+            <label class="block text-gray-700 text-sm" for="email">
+              Email
+            </label>
+            <input
+              class="border-b border-black w-full text-gray-700 leading-tight focus:outline-none text-sm"
+              style="background: none"
+              id="email"
+              type="email"
+            />
+          </div>
+          <div class="mb-12">
+            <label class="block text-gray-700 text-sm" for="number">
+              Phone Number
+            </label>
+            <input
+              class="border-b border-black w-full text-gray-700 leading-tight focus:outline-none text-sm"
+              style="background: none"
+              id="phone-number"
+              type="number"
+            />
+          </div>
+          <div class="mb-12">
+            <label class="block text-gray-700 text-sm" for="companyname">
+              Company Name
+            </label>
+            <input
+              class="border-b border-black w-full text-gray-700 leading-tight focus:outline-none text-sm"
+              style="background: none"
+              id="company-name"
+              type="text"
+            />
+          </div>
+          <div class="mb-12 relative">
+            <label class="block text-gray-700 text-sm" for="reference">
+              Type of Events
+            </label>
+            <select
+              class="border-b border-black w-full text-gray-700 leading-tight focus:outline-none text-sm pr-8"
+              style="background: none"
+              id="reference"
+            >
+              <option value=""></option>
+              <option value="linkedin">LinkedIn</option>
+              <option value="google">Google</option>
+              <option value="indeed">Indeed</option>
+              <option value="jobstreet">Jobstreet</option>
+            </select>
+            <div
+              class="pointer-events-none absolute inset-y-0 right-0 flex items-center text-gray-700"
+            >
+              <img src="./dist/images/down-icon.svg" alt="down button" />
+            </div>
+          </div>
+          <div class="mb-12">
+            <label class="block text-gray-700 text-sm" for="pax">
+              Estimated Number of Participants (Pax)
+            </label>
+            <input
+              class="border-b border-black w-full text-gray-700 leading-tight focus:outline-none text-sm"
+              style="background: none"
+              id="pax"
+              type="number"
+            />
+          </div>
+          <div class="mb-12">
+            <label class="block text-gray-700 text-sm" for="budget">
+              Budget (if know)
+            </label>
+            <input
+              class="border-b border-black w-full text-gray-700 leading-tight focus:outline-none text-sm"
+              style="background: none"
+              id="budget"
+              type="number"
+            />
+          </div>
+        </div>
+        <div class="mb-12">
+          <label class="block text-gray-700 text-sm" for="reference">
+            How did you hear about us?
+          </label>
+          <input
+            class="border-b border-black w-full text-gray-700 leading-tight focus:outline-none text-sm"
+            style="background: none"
+            id="reference"
+            type="text"
+          />
+        </div>
+
+        <div class="mb-12">
+          <label class="block text-gray-700 text-sm" for="comments">
+            Additional Comments or Questions
+          </label>
+          <input
+            class="border-b border-black w-full text-gray-700 leading-tight focus:outline-none text-sm"
+            style="background: none"
+            id="comments"
+            type="text"
+          />
+        </div>
+
+        <div class="mb-6 mx-auto">
+          <button
+            class="bg-blue-500 hover:bg-blue-700 text-white py-4 px-9 rounded-full focus:outline-none focus:shadow-outline block mx-auto"
+            style="background: linear-gradient(98deg, black 0%, #264f49 100%)"
+            type="button"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <footer
+      class="lg:pt-16 pt-14 text-darkBlue"
+      style="
+        background: linear-gradient(
+          123deg,
+          #e6e7e8 0%,
+          white 9%,
+          #e6e7e8 21%,
+          white 38%,
+          white 67%,
+          #e6e7e8 81%,
+          white 100%
+        );
+      "
+    >
+      <div class="container">
+        <div class="flex lg:justify-between justify-center items-center mb-16">
+          <div class="flex gap-6 items-center">
+            <img
+              src="./dist/images/platinumpodium.png"
+              alt="platinum podium"
+              class="h-[81px] w-[103px] lg:h-[115px] lg:w-[147px]"
+            />
+            <img
+              src="./dist/images/ppc-logo.png"
+              alt="ppc logo"
+              class="h-[69px] w-[137px] lg:h-[98px] lg:w-[195px]"
+            />
+          </div>
+          <img
+            src="./dist/images/right-down-grey.svg"
+            alt="right-arrow"
+            class="hidden lg:block"
+          />
+        </div>
+        <div class="flex items-center">
+          <img
+            src="./dist/images/sme-logo.png"
+            alt="sme logo"
+            class="lg:hidden block mx-auto mb-14 w-[130px] h-[130px]"
+          />
+        </div>
+        <div
+          class="flex gap-12 mb-14 pb-1 lg:flex-row flex-col justify-center lg:justify-start items-center"
+        >
+          <h4 class="font-clashDisplay font-light text-6xl mx-auto lg:mx-0">
+            Follow Us
+          </h4>
+          <div class="flex gap-6 lg:gap-8 justify-center">
+            <a href="https://www.cloudexpo.my">
+              <img
+                src="./dist/images/facebook.png"
+                alt="facebook"
+                class="object-none block ml-auto"
+              />
+            </a>
+            <a href="https://www.cloudexpo.my">
+              <img
+                src="./dist/images/linkedin.png"
+                alt="linkedin"
+                class="object-none block mr-auto"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="flex justify-between">
+          <div class="flex flex-col lg:flex-row">
+            <div class="pr-16">
+              <div class="lg:pb-12 lg:mb-0 pb-4 mb-1">
+                <div
+                  class="font-clashDisplaySemibolds font-clashDisplay font-semibold text-2xl pb-2"
+                >
+                  Call Us
+                </div>
+                <p class="font-inter">03-5525 4405 </p>
+              </div>
+              <div class="lg:pb-12 lg:mb-0 pb-4 mb-1">
+                <div
+                  class="font-clashDisplaySemibolds font-clashDisplay font-semibold text-2xl pb-2"
+                >
+                  E-mail Us
+                </div>
+                <p class="font-inter">inquiry@platinumpodium.com.my </p>
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-clashDisplaySemibolds font-clashDisplay font-semibold text-2xl pb-2"
+              >
+                Address
+              </div>
+              <p class="font-inter leading-8">
+                E-03-02 & 03, The Gamuda Biz Suites, <br />
+                No. 12, Jln Anggerik Vanilla 31/99, <br />
+                Kota Kemuning, Seksyen 31,<br />
+                40400 Shah Alam, Selangor, <br />
+                Malaysia
+              </p>
+            </div>
+          </div>
+          <img
+            src="./dist/images/sme-logo.png"
+            alt="sme logo"
+            class="self-end hidden lg:block w-[130px] h-[130px]"
+          />
+        </div>
+        <div class="flex flex-col lg:flex-row justify-between mt-16 pt-2 pb-12">
+          <div
+            class="flex flex-col lg:flex-row lg:justify-evenly lg:items-center justify-start gap-2.5 lg:gap-10"
+          >
+            <h4
+              class="font-clashDisplaySemibolds font-clashDisplay font-semibold text-2xl"
+            >
+              Useful Links
+            </h4>
+            <a href="" class="font-inter text-sm">About Us</a>
+            <a href="" class="font-inter text-sm">Meet The Team</a>
+            <a href="" class="font-inter text-sm">Our Solutions</a>
+            <a href="" class="font-inter text-sm">Gallery</a>
+            <a href="" class="font-inter text-sm">Let's Connect</a>
+          </div>
+          <div class="mt-16 pt-2 lg:mt-0 lg:pt-0">
+            <a href="#"
+              ><h4
+                class="font-clashDisplaySemibolds font-clashDisplay font-semibold text-2xl"
+              >
+                Back to Top
+              </h4></a
+            >
+          </div>
+        </div>
+        <div class="flex justify-center items-center pb-4">
+          <div class="mx-auto text-xs">
+            <span class="text-grey">Copyright @ 2023</span>
+            <span>Platinum Podium Sdn. Bhd.</span>
+            <span class="text-grey">|</span>
+            <span class="text-grey">All Rights Reserved</span>
+            <span class="text-grey">|</span>
+            <span class="text-grey">Developed by</span> <span>CloudExpo</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+        const mobileMenuCloseBtn = document.getElementById(
+          "mobile-menu-close-btn"
+        );
+        const mobileMenu = document.getElementById("mobile-menu");
+        const mobileLinks = document.getElementById("mobile-links");
+
+        if (mobileMenuBtn && mobileMenu && mobileLinks) {
+          mobileMenuBtn.addEventListener("click", function () {
+            mobileMenu.style.transform =
+              mobileMenu.style.transform === "translateY(0)"
+                ? "translateY(-100%)"
+                : "translateY(0)";
+          });
+
+          mobileMenuCloseBtn.addEventListener("click", function () {
+            mobileMenu.style.transform = "translateY(-100%)";
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
